@@ -1,4 +1,9 @@
+'use client';
 import Image from 'next/image'
+
+function toggleDarkTheme(){
+  document.body.classList.toggle('dark');
+}
 
 export default function Home() {
   return (
@@ -27,13 +32,23 @@ export default function Home() {
     
       <button className='my-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 active:bg-blue-800 duration-200'>Click me</button>
 
-      <ul>
+      <ul className='my-2 space-y-2'>
         <li className='bg-white p2 first:bg-blue-200'>Item 1</li>
         <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
         <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
         <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
         <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
       </ul>
+
+      {/* dark theme */}
+
+      <div className='m-10 rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-800 duration-100'>
+        <h3 className='text-base font-medium tracking-tight text-slate-900 dark:text-white duration-100'>This is a text element</h3>
+        <p className='mt-2 text-sm text-slate-500 dark:text-blue-100 duration-100'>This is an even longer p tag element</p>
+
+        <button id='toggleDark' className='text-white px-4 py-2 text-sm font-medium mt-8 bg-slate-500 dark:bg-slate-200 dark:text-slate-600 rounded-md duration-100'
+        onClick={toggleDarkTheme}>Toggle Dark Mode</button>
+      </div>
     </main>
     </>
     )
