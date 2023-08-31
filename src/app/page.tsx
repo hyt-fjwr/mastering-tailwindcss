@@ -19,14 +19,21 @@ export default function Home() {
           <div className='h-16 w-16 rounded-full bg-slate-400'></div>
       </div>
 
-      <div className='grid grid-cols-5 gap-2'>
-        <div className='bg-violet-500 h-12'></div>
-        <div className='bg-violet-500 h-12'></div>
+      <div className='grid grid-cols-3 gap-2 mt-3'>
         <div className='bg-violet-500 h-12'></div>
         <div className='bg-violet-500 h-12'></div>
         <div className='bg-violet-500 h-12'></div>
       </div>
     
+      <button className='my-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 active:bg-blue-800 duration-200'>Click me</button>
+
+      <ul>
+        <li className='bg-white p2 first:bg-blue-200'>Item 1</li>
+        <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
+        <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
+        <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
+        <li className='bg-white p2 odd:bg-blue-300 even:bg-blue-400'>Item 1</li>
+      </ul>
     </main>
     </>
     )
